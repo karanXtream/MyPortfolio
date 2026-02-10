@@ -11,15 +11,13 @@ const Skills = () => {
     { id: "tools", label: "Tools" }
   ];
 
-  const getCurrentSkills = () => {
+  const currentSkills = useMemo(() => {
     if (activeCategory === "frontend") return portfolioData.skills.frontend;
     if (activeCategory === "backend") return portfolioData.skills.backend;
     if (activeCategory === "databases") return portfolioData.skills.databases;
     if (activeCategory === "tools") return portfolioData.skills.tools;
     return [];
-  };
-
-  const currentSkills = useMemo(() => getCurrentSkills(), [activeCategory]);
+  }, [activeCategory]);
 
   return (
     <section id="skills" className="py-24 md:py-32 bg-white">

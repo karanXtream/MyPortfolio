@@ -81,7 +81,7 @@ const Projects = () => {
 
   const allProjects = portfolioData.projects;
   
-  const getFilteredProjects = () => {
+  const filteredProjects = useMemo(() => {
     if (filter === "all") {
       return allProjects;
     }
@@ -92,9 +92,7 @@ const Projects = () => {
       }
     }
     return result;
-  };
-
-  const filteredProjects = useMemo(() => getFilteredProjects(), [filter]);
+  }, [filter, allProjects]);
 
   return (
     <section id="projects" className="py-24 md:py-32 bg-gray-50">
