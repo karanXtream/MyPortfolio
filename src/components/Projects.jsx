@@ -41,11 +41,9 @@ const ProjectCard = ({ project, index }) => {
           {project.links.demo && (
             <a
               href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-black hover:opacity-70 transition-opacity"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("Demo link will be available soon!");
-              }}
             >
               <ExternalLink size={16} />
               Live Demo
@@ -54,11 +52,9 @@ const ProjectCard = ({ project, index }) => {
           {project.links.github && (
             <a
               href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-black hover:opacity-70 transition-opacity"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("GitHub link will be available soon!");
-              }}
             >
               <Github size={16} />
               Source Code
@@ -76,7 +72,8 @@ const Projects = () => {
   const categories = [
     { id: "all", label: "All Projects" },
     { id: "Web Application", label: "Web Apps" },
-    { id: "Backend Service", label: "Backend" }
+    { id: "Backend Service", label: "Backend" },
+    { id: "Mobile Apps", label: "Apps" }
   ];
 
   const allProjects = portfolioData.projects;

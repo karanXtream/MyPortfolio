@@ -39,49 +39,14 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
-      category: "Web Application",
-      featured: true,
-      links: {
-        demo: "#",
-        github: "#"
-      }
-    },
-    {
-      id: 2,
-      title: "Real-Time Chat Application",
-      description: "Scalable chat application supporting group conversations, file sharing, and end-to-end encryption using WebSocket technology.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      category: "Web Application",
-      featured: true,
-      links: {
-        demo: "#",
-        github: "#"
-      }
-    },
-    {
-      id: 3,
-      title: "REST API Service",
-      description: "High-performance RESTful API service with authentication, rate limiting, and comprehensive documentation. Handles 10k+ requests per minute.",
-      technologies: ["Python", "FastAPI", "PostgreSQL", "Docker"],
-      category: "Backend Service",
-      featured: true,
-      links: {
-        github: "#"
-      }
-    },
-    {
-      id: 4,
-      title: "Task Management Dashboard",
-      description: "Collaborative project management tool with drag-and-drop interface, team collaboration features, and progress tracking.",
-      technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-      category: "Web Application",
+      title: "Shrm Setu",
+      description: "ShrmSetu is a digital platform that connects blue-collar workers with employers, enabling seamless job discovery, hiring, and communication.",
+      technologies: ["React native", "Node.js", "MongoDB"],
+      category: "Mobile Apps",
       featured: false,
       links: {
         demo: "#",
-        github: "#"
+        github: "https://github.com/karanXtream/shrmSetu"
       }
     }
   ],
