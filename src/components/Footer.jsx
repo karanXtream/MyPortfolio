@@ -6,16 +6,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-gradient-to-b from-black to-gray-900 text-white py-16 border-t-2 border-gray-800">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-light tracking-tight mb-4">KS</h3>
+            <h3 className="text-3xl font-bold tracking-tight mb-4 hover:text-gray-300 transition-colors cursor-pointer">KS</h3>
+            <p className="text-gray-400 text-sm font-normal">Building beautiful digital experiences</p>
           </div>
 
           <div>
-            <h4 className="text-sm font-normal mb-4 text-gray-300">Quick Links</h4>
-            <nav className="space-y-2">
+            <h4 className="text-sm font-bold mb-4 text-gray-200 uppercase tracking-wider">Quick Links</h4>
+            <nav className="space-y-3">
               {["Home", "About", "Projects", "Contact"].map((item) => (
                 <button
                   key={item}
@@ -25,40 +26,40 @@ const Footer = () => {
                       element.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="block text-gray-400 hover:text-white transition-colors text-sm"
+                  className="block text-gray-400 hover:text-white transition-all duration-300 text-sm font-normal hover:translate-x-1"
                 >
-                  {item}
+                  → {item}
                 </button>
               ))}
             </nav>
           </div>
 
           <div>
-            <h4 className="text-sm font-normal mb-4 text-gray-300">Connect</h4>
+            <h4 className="text-sm font-bold mb-4 text-gray-200 uppercase tracking-wider">Connect</h4>
             <div className="flex items-center gap-4">
               <a
                 href={portfolioData.contact.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-all duration-200 hover:-translate-y-1"
+                className="group text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 p-2 rounded-full hover:bg-gray-800"
               >
-                <Github size={20} />
+                <Github size={22} className="group-hover:animate-float" />
               </a>
               <a
                 href={portfolioData.contact.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-all duration-200 hover:-translate-y-1"
+                className="group text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 p-2 rounded-full hover:bg-gray-800"
               >
-                <Linkedin size={20} />
+                <Linkedin size={22} className="group-hover:animate-float" />
               </a>
               <a
                 href={portfolioData.contact.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-all duration-200 hover:-translate-y-1"
+                className="group text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 p-2 rounded-full hover:bg-gray-800"
               >
-                <Twitter size={20} />
+                <Twitter size={22} className="group-hover:animate-float" />
               </a>
             </div>
           </div>
@@ -66,11 +67,11 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm flex items-center gap-2">
+            <p className="text-gray-400 text-sm font-normal">
               © {currentYear} {portfolioData.hero.name}. All rights reserved.
             </p>
-            <p className="text-gray-400 text-sm flex items-center gap-2">
-              Made with <Heart size={14} className="text-red-500" /> using React & FastAPI
+            <p className="text-gray-400 text-sm flex items-center gap-2 font-normal">
+              Made with <Heart size={16} className="text-red-500 animate-pulse" /> by Karan Shrivastava
             </p>
           </div>
         </div>

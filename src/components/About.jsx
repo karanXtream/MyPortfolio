@@ -7,14 +7,14 @@ const About = () => {
   const highlights = portfolioData.about.highlights;
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-gray-50">
+    <section id="about" className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-black">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black">
               About Me
             </h2>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed font-normal">
               {description}
             </p>
           </div>
@@ -23,10 +23,12 @@ const About = () => {
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 group hover:translate-x-2 transition-transform duration-300"
+                className="group hover:translate-x-2 transition-all duration-300 p-4 rounded-lg border border-gray-200 hover:border-black hover:bg-gray-50 hover:shadow-md"
               >
-                <CheckCircle2 size={20} className="text-black mt-1 flex-shrink-0" />
-                <p className="text-base md:text-lg text-gray-700">{highlight}</p>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 size={24} className="text-black mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <p className="text-base md:text-lg text-gray-700 font-normal">{highlight}</p>
+                </div>
               </div>
             ))}
           </div>
