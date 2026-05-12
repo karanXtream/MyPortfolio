@@ -42,7 +42,7 @@ const Hero = () => {
               Get In Touch
             </button>
             <a
-              href="https://drive.google.com/file/d/17unetw946ztxmc_yKUnFZoboGPENRGEP/view?usp=sharing"
+              href="https://drive.google.com/file/d/1I7yIGo8KaLX332kANekUQdfFwrujIiFd/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-white/80 backdrop-blur-sm border-2 border-black text-black text-sm font-semibold rounded-lg hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2 hover:shadow-lg"
